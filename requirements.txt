@@ -3,5 +3,6 @@ streamlit
 pandas
 scipy
 numpy
-plotly
 string-grouper
+openpyxl
+xlrd
