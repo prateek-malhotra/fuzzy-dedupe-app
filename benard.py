@@ -25,8 +25,13 @@ if uploaded_file is not None:
 
     #Pick parameters from what customer selects as well as thresholds
     #Create on streamlit a way customer inputs colum to perform duplicate identification and column to be distinct
-    columntocheckduplicate =header[2]
-    columntobedistinct =header[1]
+#     columntocheckduplicate =header[2]
+#     columntobedistinct =header[1]
+
+    duplicate = st.selectbox('Column to check duplicate', data_frame.columns,index=2)
+    distinct = st.selectbox('Column to check distinct', data_frame.columns,index=1)
+    columntocheckduplicate = duplicate
+    columntobedistinct = distinct
 
     s1 = st.slider("Minimum Similarity (%)", min_value=0, max_value=100,value=85,step=5)
 
