@@ -17,7 +17,7 @@ try:
   uploaded_file = st.file_uploader("Choose a csv file", type=["csv","xlsx"])
 
   if uploaded_file is not None:
-      data_frame = pd.read_excel(uploaded_file)
+      data_frame = pd.read_excel(uploaded_file, engine='openpyxl')
       data_frame = data_frame.applymap(str)
       # store head as list (we can use as a drop down on streamlit)
       header = list(data_frame.columns)
