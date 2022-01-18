@@ -31,9 +31,12 @@ try:
       header = list(data_frame.columns)
           #Keep a clean version of the dataframe to be used later
       joindataframe = data_frame
-
-      duplicate = st.selectbox('Column to check duplicate', data_frame.columns,index=0)
-      distinct = st.selectbox('Column to check distinct', data_frame.columns,index=1)
+      
+      df_col_list=data_frame.columns
+      df_col_list=df_col_list.insert(0,'Drop down to select column')
+      
+      duplicate = st.selectbox('Column to check duplicate', df_col_list,index=0)
+      distinct = st.selectbox('Column to check distinct', df_col_list,index=0)
 
       #Pick parameters from what customer selects as well as thresholds
       #Create on streamlit a way customer inputs colum to perform duplicate identification and column to be distinct
