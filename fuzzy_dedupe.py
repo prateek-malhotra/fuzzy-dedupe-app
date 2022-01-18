@@ -32,7 +32,7 @@ try:
           #Keep a clean version of the dataframe to be used later
       joindataframe = data_frame
 
-      duplicate = st.selectbox('Column to check duplicate', data_frame.columns,index=2)
+      duplicate = st.selectbox('Column to check duplicate', data_frame.columns,index=0)
       distinct = st.selectbox('Column to check distinct', data_frame.columns,index=1)
 
       #Pick parameters from what customer selects as well as thresholds
