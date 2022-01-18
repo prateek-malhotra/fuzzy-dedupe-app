@@ -6,3 +6,4 @@ numpy
 string-grouper
 openpyxl
 xlrd
+xlsxwriter
