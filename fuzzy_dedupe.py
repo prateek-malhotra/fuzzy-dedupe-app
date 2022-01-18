@@ -1,7 +1,7 @@
 # try:
 import streamlit as st
 from PIL import Image
-image = Image.open('Duplicate Names.png')
+image = Image.open('Duplicate Names.PNG')
 st.sidebar.image(image,use_column_width=True)
 st.sidebar.write("""# Fuzzy Dedupe App
 ***By: Smallpdf Kenya*** """)
